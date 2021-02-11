@@ -1,0 +1,20 @@
+$mobile : 768px;
+$tablet : 1024px;
+$desktop : 1216px;
+$widescreen : 1217px;
+
+@mixin mobile-only {
+    @media (max-width: $mobile) { @content; }   
+}
+
+@mixin tablet-only {
+    @media (min-width: $tablet) and (max-width: $desktop) { @content; }
+}
+
+@mixin desktop-only {
+    @media (min-width: $desktop) and (max-width: $widescreen) { @content; }
+}
+
+@mixin widescreen-only{
+    @media (min-width: $widescreen) { @content; }
+}

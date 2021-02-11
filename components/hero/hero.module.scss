@@ -1,0 +1,17 @@
+@import '/styles/breakpoints';
+
+.hero{
+    .logo{
+        padding: 10px;
+        img{
+            text-align: center;
+            display: block;
+            width: 100%;
+            max-width: 175px;
+            margin: 0 auto;
+        }
+    }
+    &__text{
+        text-align: center;
+    }
+}

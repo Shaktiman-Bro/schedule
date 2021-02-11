@@ -1,0 +1,42 @@
+.dna{
+    padding: 15px;
+    &__title{
+        color: #3E4952;
+        font-family: "OpenSans";
+        font-size: 28px;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__inner{
+            flex: 0 1 150px;
+            text-align: center;
+            vertical-align: baseline;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            img{
+                font-size: 3rem;
+                width: 1em;
+                height: 1em;
+                object-fit: contain;
+            }
+            h4{
+                color: #3E4952;
+                font-family: "OpenSans";
+                font-size: 15px;
+                letter-spacing: 0;
+                line-height: 20px;
+                text-align: center;
+                font-weight: 300;
+            }
+        }
+    }
+}

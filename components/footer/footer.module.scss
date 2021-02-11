@@ -1,0 +1,53 @@
+.footer{
+    background: #3E4952;
+    color: #FFFFFF;
+    font-family: "OpenSans";
+    text-align: center;
+    padding: 20px;
+    .favicon{
+        img{
+            font-size: 1rem;
+            width: 1em;
+            height: 1em;
+        }
+    }
+
+    .contact{
+        font-size: 12px;
+        line-height: 20px;
+        &__call{
+            h5{
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+            span{
+                display: block;
+            }
+        }
+        &__email{
+            h5{
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    .copyright{
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    .links{
+        font-size: 12px;
+        &__link{
+            line-height: 20px;
+            &:not(:last-of-type){
+                &::after{
+                    padding: 0 5px;
+                    content: '|';
+                }
+            }
+        }
+    }
+}
