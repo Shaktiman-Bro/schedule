@@ -1,23 +1,93 @@
+@import '/styles/breakpoints';
+
+.footer__container{
+    background: #3E4952;    
+}
+
 .footer{
-    background: #3E4952;
     color: #FFFFFF;
     font-family: "OpenSans";
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    font: 14px;
+    max-width: $desktop;
+    margin: 0 auto;
+    .desktop__menu{
+        padding-bottom: 20px;
+        @include tablet{
+            display: flex;
+            text-align: left;
+        }
+    }
     .favicon{
+        @include tablet{
+            width: 100%;
+            text-align: left;
+        }
         img{
-            font-size: 1rem;
+            font-size: 2rem;
             width: 1em;
             height: 1em;
         }
     }
 
+    .mobile__menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        li{
+            &:not(:last-of-type){
+                &::after{
+                    padding: 0 5px;
+                    content: '|';
+                }
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+        @include tablet{
+            display: none;
+        }
+    }
+    
+    .menus{
+        display: none;
+        @include tablet{
+            display: flex;
+        }
+    }
+
+    .menu{
+        list-style: none;
+        text-align: left;
+        padding: 0 25px;
+        margin: 0;
+        li{
+            &:first-of-type{
+                font-weight: 700;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+
     .contact{
-        font-size: 12px;
+        font-size: 1em;
         line-height: 20px;
         &__call{
             h5{
-                font-size: 12px;
+                @include tablet{
+                    margin-top: 0;
+                    text-align: left;
+                }
+                font-size: 1em;
                 margin-bottom: 0;
             }
             span{
@@ -26,22 +96,25 @@
         }
         &__email{
             h5{
-                font-size: 12px;
+                font-size: 1em;
                 margin-bottom: 0;
             }
         }
     }
     
     .copyright{
-        font-size: 12px;
+        font-size: 1em;
         line-height: 20px;
         margin-bottom: 0;
     }
-
+    
     .links{
-        font-size: 12px;
+        margin-top: 15px;
+        font-size: 1em;
         &__link{
             line-height: 20px;
+            text-decoration: none;
+            color: inherit;
             &:not(:last-of-type){
                 &::after{
                     padding: 0 5px;

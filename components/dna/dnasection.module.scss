@@ -1,4 +1,9 @@
+@import '/styles/breakpoints';
+
+
 .dna{
+    max-width: $desktop;
+    margin: 0 auto;
     padding: 15px;
     &__title{
         color: #3E4952;
@@ -8,6 +13,16 @@
         line-height: 20px;
         text-align: center;
         font-weight: 400;
+        @include tablet{
+            font-size: 45px;
+            letter-spacing: 0;
+            line-height: 50px;
+        }
+        @include desktop{
+            font-size: 50px;
+            letter-spacing: 0;
+            line-height: 50px;
+        }
     }
 
     &__cards{
@@ -15,18 +30,27 @@
         flex-wrap: wrap;
         justify-content: center;
         &__inner{
-            flex: 0 1 150px;
+            flex: 0 0 40%;
             text-align: center;
             vertical-align: baseline;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
+            @include tablet{
+                flex: 0 1 33%;
+            }
             img{
                 font-size: 3rem;
                 width: 1em;
                 height: 1em;
                 object-fit: contain;
+                @include tablet{
+                    font-size: 5rem;
+                }
+                @include desktop{
+                    font-size: 6rem;
+                }
             }
             h4{
                 color: #3E4952;
@@ -35,7 +59,18 @@
                 letter-spacing: 0;
                 line-height: 20px;
                 text-align: center;
-                font-weight: 300;
+                font-weight: 400;
+                @include tablet{
+                    font-size: 18px;
+                    letter-spacing: 0;
+                    line-height: 24px;
+                }
+                @include desktop{
+                    font-size: 18px;
+                    letter-spacing: 0;
+                    line-height: 24px;
+                }
+
             }
         }
     }

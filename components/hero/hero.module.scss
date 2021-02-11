@@ -1,17 +1,162 @@
 @import '/styles/breakpoints';
 
+.container{
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 80%;
+    background: url('/images/so-banner-element.svg') no-repeat center bottom / 100% auto;
+    @include desktop{
+        text-align: left;
+        padding-bottom: 15px;
+        min-height: 600px;
+        background: url('/images/so-banner-element.svg') no-repeat right 100% / auto auto;
+    }
+    
+}
+
+
 .hero{
-    .logo{
+    &__logo{
         padding: 10px;
+        text-align: center;
         img{
             text-align: center;
             display: block;
             width: 100%;
             max-width: 175px;
             margin: 0 auto;
+            @include desktop{
+                margin: 0;
+            }
         }
     }
-    &__text{
+    &__title{
         text-align: center;
+        color: #333333;
+        font-family: "OpenSans";
+        font-size: 37px;
+        letter-spacing: 0;
+        line-height: 44px;
+        font-weight: 400;
+        margin-top: 70px;
+        @include desktop{
+            text-align: left;
+        }
+        span{
+            position: relative;
+            &::after{
+                content: '';
+                width: 3em;
+                height: 1em;
+                font-size: 30px;
+                background: url('/images/so-fly-icon.png') no-repeat center/contain;
+                position: absolute;
+                right: 20px;
+                top: 0;
+                transform: translateY(-100%);
+                @include tablet{
+                    font-size: 50px;
+                }
+            }
+        }
+        @include tablet{
+            font-size: 62px;
+            letter-spacing: 0;
+            line-height: 64px;
+        }
     }
+    &__subtitle{
+        text-align: center;
+        color: #333333;
+        font-family: "OpenSans";
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: 30px;
+        @include tablet{
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 0;
+            line-height: 40px;
+        }
+        @include desktop{
+            text-align: left;
+        }
+    }
+}
+
+.home__buttons{
+    @include tablet{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @include desktop{
+        // justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .try__button{
+        text-align: center;
+        margin: 25px 0;
+        @include tablet{
+            margin-right: 20px;
+        }
+        button{
+            background: #006BB1;
+            color: #FFFFFF;
+            padding: 14px 35px;
+            font-family: "OpenSans";
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 0.2px;
+            align-items: center;
+            border: 0;
+            border-radius: 9999999px;
+        }
+    }
+    .intro{
+        text-align: center;
+        
+        &__link{
+            color: #006BB1;
+            font-family: "OpenSans";
+            font-size: 1rem;
+            letter-spacing: 0;
+            line-height: 26px;
+            text-decoration: none;
+            display: inline-flex;
+            @include tablet{
+                // box-sizing: border-box;
+                // height: 32px;
+                line-height: 25px;
+                letter-spacing: 0.2px;
+                align-items: center;
+                padding: 14px 35px;
+                border-radius: 16px;
+                border: 2px solid #006BB1;
+                border-radius: 9999999px;
+                background-color: #FFFFFF;
+            }
+            &__icon{
+                margin-left: 5px;
+                vertical-align: middle;
+                @include tablet{
+                    display: none;
+                }
+            }
+        }
+        &__play__icon{
+            margin-right: 5px;
+            display: none;
+            vertical-align: middle;
+            @include tablet{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+.banner{
 }

@@ -1,5 +1,12 @@
-.try{
+@import '/styles/breakpoints';
+
+.try__container{
     background: #F4F4F4;
+}
+
+.try{
+    max-width: $desktop;
+    margin: 0 auto;
     padding: 15px;
     &__icon{
         text-align: center;
@@ -11,7 +18,6 @@
         }
     }
     &__title{
-
         text-align: center;
         line-height: 34px;
         letter-spacing: 0.08px;
@@ -20,6 +26,16 @@
         font-family: "OpenSans";
         font-size: 28px;
         color: #545454;
+        @include tablet{
+            font-size: 45px;
+            letter-spacing: 0.13px;
+            line-height: 61px;
+        }
+        @include desktop{
+            font-size: 50px;
+            letter-spacing: 0.14px;
+            line-height: 68px;
+        }
     }
     &__subtitle{
         text-align: center;
@@ -30,6 +46,18 @@
         font-weight: 300;
         font-family: "OpenSans";
         color: #545454;
+        @include tablet{
+            font-size: 35px;
+            font-weight: 300;
+            letter-spacing: 0.12px;
+            line-height: 47px;
+        }
+        @include desktop{
+            font-size: 40px;
+            font-weight: 300;
+            letter-spacing: 0.14px;
+            line-height: 55px;
+        }
     }
     &__button{
         text-align: center;

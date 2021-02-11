@@ -1,0 +1,47 @@
+@import '/styles/breakpoints';
+
+.menu__container{
+  background-color: #3E4952;
+}
+
+.menu{
+  max-width: $desktop;
+  color: #FFFFFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  letter-spacing: 0.14px;
+  line-height: 17px;
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  justify-content: flex-end;
+  margin: 0 auto;
+  @include tablet{
+    font-size: 14px;
+  }
+  @include desktop{
+    font-size: 1rem;
+  }
+  .links{
+    padding: 5px 10px;
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .trial__button{
+    box-sizing: border-box;
+    height: 2rem;
+    width: 116px;
+    border: 2px solid #FFFFFF;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

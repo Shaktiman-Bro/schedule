@@ -1,0 +1,96 @@
+@import '/styles/breakpoints';
+
+
+
+
+.header{
+  max-width: $desktop;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+  .mobile__menu{
+    color: #006BB1;
+    font-family: "OpenSans";
+    font-size: 12px;
+    letter-spacing: 0.14px;
+    line-height: 17px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    @include tablet{
+      display: none;
+    }
+    .signin__link{
+      padding: 5px;
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .burger{
+      font-size: 2.5rem;
+      width: 1em;
+      height: 1em;
+      box-sizing: border-box;
+      padding: 5px;
+      // background: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      &__lines{
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: #000;
+        &:nth-of-type(2){
+          width: 50%;
+        }
+        &:nth-of-type(3){
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  .navigation{
+    padding: 10px 0;
+    display: none;
+    @include tablet{
+      display: block;
+    }
+  }
+  .top__menu{
+    color: #006BB1;
+    font-family: "OpenSans";
+    font-size: 12px;
+    letter-spacing: 0.14px;
+    line-height: 17px;
+    text-align: right;
+    a{
+      padding: 5px;
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      .signin__link__icon{
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .main__menu{
+    color: #3E4952;
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.18px;
+    line-height: 22px;
+    a{
+      text-decoration: none;
+      color: inherit;
+      padding: 5px;
+      display: inline-block;
+    }
+  }
+}

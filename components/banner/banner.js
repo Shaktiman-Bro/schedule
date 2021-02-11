@@ -1,12 +1,15 @@
 import React from 'react'
-import Menu from './menu';
+import Menu from '../hero/menu';
+import styles from './banner.module.scss'
 
 function banner() {
     return (
-        <div className="banner">
-            <img src="/images/so-banner-element.svg" />
+        <>
+            <div className={styles.banner}>
+                {/* <img src="/images/so-banner-element.svg" /> */}
+            </div>
             <Menu />
-        </div>
+        </>
     )
 }
 
